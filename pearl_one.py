@@ -14,7 +14,7 @@ class Pearl(BaseEstimator, TransformerMixin):
         self.model_not_check = [i for i in vars_dict.values()]
 
     def get_features_rank(self, estimator, dataframe: pd.DataFrame, list_of_vars: list, target: str, cv=KFold(),
-                          get_fe: bool = False) -> Union[tuple[dict, dict], dict]:
+                          get_fe: bool = False) -> dict | tuple[dict, dict]:
         """
         Getting rank for all vars from list_of_vars by estimator.feature_importances_.
         The rank is calculated as sum of all feature_importances_ by all folds in cv
