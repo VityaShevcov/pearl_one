@@ -38,7 +38,7 @@ class Pearl(BaseEstimator, TransformerMixin):
         Returns:
             dict: dict with var as key and rank: int as rank. Optional returns two dicts(see get_fe parameter)
         """
-        rank_dict, fe_dict = {}, {}
+        
         dict_fold_importances = {'Feature': list_of_vars, 'fold': np.zeros(len(list_of_vars))}
 
         for fold, (train_idx, val_idx) in enumerate(cv.split(dataframe), 1):
@@ -49,12 +49,12 @@ class Pearl(BaseEstimator, TransformerMixin):
             # (first rank = max(sum feature_importances_))
             dict_fold_importances['fold'] += estimator.feature_importances_
 
-            # get dict of estimates as sum feature_importances_ for all folds
-            fe_dict = {key: value for key, value in
+        # get dict of estimates as sum feature_importances_ for all folds
+        fe_dict = {key: value for key, value in
                        zip(dict_fold_importances['Feature'], dict_fold_importances['fold'])}
 
-            # get dict with ranked all vars by sum of feature_importances_
-            rank_dict = {key: rank for rank, key in enumerate(sorted(fe_dict, key=fe_dict.get, reverse=True), 1)}
+        # get dict with ranked all vars by sum of feature_importances_
+        rank_dict = {key: rank for rank, key in enumerate(sorted(fe_dict, key=fe_dict.get, reverse=True), 1)}
 
         if get_fe:
             return rank_dict, fe_dict
