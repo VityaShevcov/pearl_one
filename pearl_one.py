@@ -97,7 +97,7 @@ class Pearl:
         by model with including vars
 
         Args:
-            dataframe (pd.DataFrame): df to analyze
+            dataframe (pd.DataFrame): sample for feature selection
             oof (np.array): out of fold predictions
             get_train_scores (bool, optional): option for getting mean train predictions. 
             Defaults to False.
@@ -129,12 +129,32 @@ class Pearl:
         return fold_auc, oof
     
     
-    def var_selection_meta(self, var_key, var_name, fold_auc, old_auc
-        , iteration_index, len_of_spaces, lenj, backward = True):
-        
+    def var_selection_meta(self, var_key: int, var_name: str, fold_auc: np.array, old_auc: np.array,
+        iteration_index: int, len_of_spaces: str, lenj: int, 
+        backward: bool = True) -> tuple[pd.DataFrame, np.array]:
+        """
+        Check the main rule for including var in the model.
+
+        Args:
+            var_key (int): var rank from the ranc_dict
+            var_name (str): var name from ranc_dict
+            fold_auc (np.array): roc_auc for each validation fold 
+            old_auc (np.array): roc_auc for each validation fold for the past iteration
+            iteration_index (int): num of iteration index. In straight passing it will match with rank of var
+            len_of_spaces (str): auxiliary parameter for sys.stdout
+            lenj (int): len of rank_dict. For sys.stdout 
+            backward (bool, optional): pass. Defaults to True.
+
+        Returns:
+            tuple[pd.DataFrame, np.array]: new_df_meta for adding to meta file, old_auc - updated by rule
+        """
+
+        # for adding in meta file
         df_folds_old = pd.DataFrame(old_auc.copy().reshape(1, self.cv.n_splits), \
         columns = [ y + '_old' for y in ['fold' + str(i) for i in range(1, self.cv.n_splits +1)]])
         df_folds_old.index = [iteration_index]
+        
+        # checkout rule
         summa = sum(fold_auc - old_auc > 0)*1 +  sum(fold_auc - old_auc < 0)*-1                                                                                                                                                                                                                                                        
         if backward:
             if summa > 0 or all(fold_auc == old_auc):
@@ -153,12 +173,13 @@ class Pearl:
                 flag_drop = 1
                 self.model_in.remove(var_name)
                 
-
+        # for statusbar
         g = iteration_index/lenj
         sys.stdout.write(f'\r{var_name} {len_of_spaces}{round((g)*100, 2)}%')
         sys.stdout.flush()
         self.model_not_check.remove(var_name)
 
+        # add to meta file
         df_folds = pd.DataFrame(fold_auc.copy().reshape(1, self.cv.n_splits), \
             columns = ['fold' + str(i) for i in range(1, self.cv.n_splits +1)])
         df_folds.index = [iteration_index]
@@ -169,8 +190,17 @@ class Pearl:
         return new_df_meta, old_auc
 
     
-    def get_selected(self, dataframe):
-        
+    def get_selected(self, dataframe: pd.DataFrame) -> list:
+        """
+        Returns final list with vars, writing all steps in meta file
+
+        Args:
+            dataframe (pd.DataFrame): sample for feature selection
+
+        Returns:
+            list: list with all vars, selected by rule
+        """
+        # for continuing feature selection with existing meta files
         if self.go_on:
             rank_dict = json.load(open(self.path_dict))
             df_meta = pd.read_csv(self.path_meta, index_col = 0)
@@ -183,14 +213,16 @@ class Pearl:
                 old_auc = np.array(df_meta.iloc[-1,:]['fold1_old' : 'fold4_old'])
             else:
                 old_auc = np.array(df_meta.iloc[-1,:]['fold1': 'fold4'])
-        
+                
+        # for starting new feature selection process
         else:
             rank_dict = self.get_features_rank(dataframe)
             json.dump(rank_dict, open( self.path_dict, 'w' ))
             self.model_not_check = [i for i in rank_dict.keys()] 
             iteration_index = 0
             max_rank = 0
-        
+            
+        # creating np.arrays for writing predictions
         oof = np.zeros(len(dataframe))
         #train_preds = np.zeros(len(dataframe))
 
@@ -198,6 +230,7 @@ class Pearl:
         lenj = len(rank_dict)
         max_len = max([len(feature_col) for feature_col in self.model_not_check])
         
+        # starting feture selection
         for var_name, var_key in [i for i in rank_dict.items()][max_rank:]:
         
             len_of_spaces  = (max_len - len(var_name))*' '
@@ -228,8 +261,11 @@ class Pearl:
                 new_df_meta, old_auc = self.var_selection_meta(var_key, var_name,\
                  fold_auc, old_auc, iteration_index, len_of_spaces, lenj, backward = False)
                 df_meta = pd.concat([df_meta, new_df_meta])
-        
+
+            # saving each step in meta file
             df_meta.to_csv(self.path_meta)
             
         return self.model_in
         
+    def backward():
+        pass
