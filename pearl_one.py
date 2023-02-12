@@ -125,6 +125,20 @@ class Pearl:
                 return fold_auc, oof, train_preds
 
         return fold_auc, oof
+    
+    @staticmethod
+    def status_bar(var_name: str, len_of_spaces: str, iteration_index: int, lenj: int):
+        """
+        For getting status of iteration
+        Args:
+            var_name (str): var rank from the ranc_dict
+            len_of_spaces (str): auxiliary parameter for sys.stdout
+            iteration_index (int):auxiliary parameter for sys.stdout
+            lenj (int): len of rank_dict. For sys.stdout
+        """
+        g = iteration_index / lenj
+        sys.stdout.write(f'\r{var_name} {len_of_spaces}{round(g * 100, 2)}%')
+        sys.stdout.flush()
 
     def var_selection_meta(self, var_key: int, var_name: str, fold_auc: np.array, old_auc: np.array,
                            iteration_index: int, len_of_spaces: str, lenj: int,
@@ -169,10 +183,8 @@ class Pearl:
                 flag_drop = 1
                 self.model_in.remove(var_name)
 
-        # for statusbar
-        g = iteration_index / lenj
-        sys.stdout.write(f'\r{var_name} {len_of_spaces}{round(g * 100, 2)}%')
-        sys.stdout.flush()
+        self.status_bar(var_name, len_of_spaces, iteration_index, lenj)
+        
         self.model_not_check.remove(var_name)
 
         # add to meta file
@@ -236,9 +248,9 @@ class Pearl:
 
                 fold_auc, oof = self.get_cv_scores(dataframe, oof)
                 old_auc = fold_auc.copy()
-                g = iteration_index / lenj
-                sys.stdout.write(f'\r{var_name} {len_of_spaces}{round(g * 100, 2)}%')
-                sys.stdout.flush()
+                
+                self.status_bar(var_name, len_of_spaces, iteration_index, lenj)
+                
                 self.model_not_check.remove(var_name)
 
                 df_folds = pd.DataFrame(fold_auc.copy().reshape(1, self.cv.n_splits),
