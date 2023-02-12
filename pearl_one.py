@@ -274,7 +274,8 @@ class Pearl:
             # saving each step in meta file
             df_meta.to_csv(self.path_meta)
 
-        return self.model_in
+        return [t[0] for t in rank_dict.items() \
+                             if t[1] in df_meta[df_meta['flag_drop'] == 0]['var_rank'].values]
 
     def backward(self):
         pass
