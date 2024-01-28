@@ -217,7 +217,7 @@ class AddTrain:
         report['diff'] = round(100*(report['update_w_mape_oot'] - report['const_mape_oot'])/report['const_mape_oot'], 2)
         return report
     
-    def scoring_update_model(self, window: int, n_splits: int, test_size: int, margin: int, lgbm_params: dict, early_stopping_rounds: int, round_num: int, metric: Callable):
+    def scoring_update_model(self, start_date: str, window: int, n_splits: int, test_size: int, margin: int, lgbm_params: dict, early_stopping_rounds: int, round_num: int, metric: Callable):
         """
         Метод создает новую модель для каждой даты отчета и эмулирует скоринг с добавлением обучения.
 
