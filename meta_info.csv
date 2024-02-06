@@ -1,13 +1,13 @@
 month,features,mape_new,mape_old
-2023-01,['feature17'],0.356,0.98
-2023-02,['feature17'],0.358,0.359
-2023-03,['feature17'],0.358,0.358
-2023-04,['feature17'],0.354,0.355
-2023-05,['feature17'],0.361,0.362
-2023-06,['feature17'],0.354,0.354
-2023-07,['feature17'],0.354,0.355
-2023-08,['feature17'],0.357,0.357
-2023-09,['feature17'],0.351,0.351
-2023-10,['feature17'],0.358,0.359
-2023-11,['feature17'],0.356,0.356
-2023-12,['feature17'],0.485,0.485
+2023-01,"['feature3', 'feature1', 'feature2', 'feature5', 'feature20']",0.105,0.123
+2023-02,"['feature3', 'feature2', 'feature5', 'feature1']",0.097,0.099
+2023-03,"['feature3', 'feature5', 'feature2', 'feature1']",0.09,0.093
+2023-04,"['feature3', 'feature5', 'feature1', 'feature2']",0.086,0.088
+2023-05,"['feature3', 'feature5', 'feature1', 'feature2']",0.085,0.088
+2023-06,"['feature5', 'feature3', 'feature1', 'feature2']",0.081,0.083
+2023-07,"['feature5', 'feature3', 'feature1', 'feature2']",0.082,0.084
+2023-08,"['feature5', 'feature3', 'feature1', 'feature2']",0.083,0.083
+2023-09,"['feature5', 'feature3', 'feature2', 'feature1']",0.077,0.08
+2023-10,"['feature5', 'feature3', 'feature2', 'feature1']",0.078,0.08
+2023-11,"['feature5', 'feature3', 'feature2', 'feature1']",0.075,0.076
+2023-12,"['feature5', 'feature3', 'feature2', 'feature1']",0.072,0.076
