@@ -2,6 +2,79 @@
 Начинаем обработку данных, начиная с 2023-01
 --------------------------------------------------------------------
 Обрабатываем месяц 2023-01
+Тренировочные данные с 2021-01-31 00:00:00 по 2022-10-31 00:00:00
+Всего  (22000, 29)
+OOT данные с 2022-11-30 00:00:00 по 2022-11-30 00:00:00
+Всего  (1000, 29)
+1
+треин мин 2021-02-28 00:00:00 треин макс 2022-07-31 00:00:00 shape (18000, 30)
+тест мин 2022-08-31 00:00:00 тест макс 2022-08-31 00:00:00 shape (1000, 30)
+2
+треин мин 2021-03-31 00:00:00 треин макс 2022-08-31 00:00:00 shape (18000, 30)
+тест мин 2022-09-30 00:00:00 тест макс 2022-09-30 00:00:00 shape (1000, 30)
+3
+треин мин 2021-04-30 00:00:00 треин макс 2022-09-30 00:00:00 shape (18000, 30)
+тест мин 2022-10-31 00:00:00 тест макс 2022-10-31 00:00:00 shape (1000, 30)
+начинаем след этап 100
+new var_for_add ! feature1
+new var_for_add ! feature3
+early_stopping_rounds 5
+едем дальше
+в итоге получили список ['feature3']
+начинаем след этап 0.359
+new var_for_add ! feature2
+early_stopping_rounds 5
+едем дальше
+в итоге получили список ['feature3', 'feature2']
+начинаем след этап 0.327
+new var_for_add ! feature6
+early_stopping_rounds 5
+едем дальше
+в итоге получили список ['feature3', 'feature2', 'feature6']
+начинаем след этап 0.319
+early_stopping_rounds 5
+мы сошлись
+['feature3', 'feature2', 'feature6']
+0.319
+Новая модель (0.212) лучше старой (0.28) для 2022-11-30T00:00:00.000000000
+--------------------------------------------------------------------
+Обрабатываем месяц 2023-02
+Тренировочные данные с 2021-01-31 00:00:00 по 2022-11-30 00:00:00
+Всего  (23000, 29)
+OOT данные с 2022-12-31 00:00:00 по 2022-12-31 00:00:00
+Всего  (1000, 29)
+1
+треин мин 2021-03-31 00:00:00 треин макс 2022-08-31 00:00:00 shape (18000, 30)
+тест мин 2022-09-30 00:00:00 тест макс 2022-09-30 00:00:00 shape (1000, 30)
+2
+треин мин 2021-04-30 00:00:00 треин макс 2022-09-30 00:00:00 shape (18000, 30)
+тест мин 2022-10-31 00:00:00 тест макс 2022-10-31 00:00:00 shape (1000, 30)
+3
+треин мин 2021-05-31 00:00:00 треин макс 2022-10-31 00:00:00 shape (18000, 30)
+тест мин 2022-11-30 00:00:00 тест макс 2022-11-30 00:00:00 shape (1000, 30)
+начинаем след этап 100
+new var_for_add ! feature3
+early_stopping_rounds 5
+едем дальше
+в итоге получили список ['feature3']
+начинаем след этап 0.355
+new var_for_add ! feature2
+early_stopping_rounds 5
+едем дальше
+в итоге получили список ['feature3', 'feature2']
+начинаем след этап 0.323
+new var_for_add ! feature6
+early_stopping_rounds 5
+едем дальше
+в итоге получили список ['feature3', 'feature2', 'feature6']
+начинаем след этап 0.312
+early_stopping_rounds 5
+мы сошлись
+['feature3', 'feature2', 'feature6']
+0.312
+Новая модель (0.194) лучше старой (0.197) для 2022-12-31T00:00:00.000000000
+--------------------------------------------------------------------
+Обрабатываем месяц 2023-03
 Тренировочные данные с 2021-01-31 00:00:00 по 2022-12-31 00:00:00
 Всего  (24000, 29)
 OOT данные с 2023-01-31 00:00:00 по 2023-01-31 00:00:00
@@ -20,7 +93,7 @@ new var_for_add ! feature3
 early_stopping_rounds 5
 едем дальше
 в итоге получили список ['feature3']
-начинаем след этап 0.238
+начинаем след этап 0.237
 new var_for_add ! feature1
 new var_for_add ! feature2
 early_stopping_rounds 5
@@ -37,19 +110,25 @@ new var_for_add ! feature1
 early_stopping_rounds 5
 едем дальше
 в итоге получили список ['feature3', 'feature2', 'feature6', 'feature1']
-начинаем след этап 0.195
+начинаем след этап 0.196
 new var_for_add ! feature5
 early_stopping_rounds 5
 едем дальше
 в итоге получили список ['feature3', 'feature2', 'feature6', 'feature1', 'feature5']
-начинаем след этап 0.19
+начинаем след этап 0.193
+new var_for_add ! feature4
+new var_for_add ! feature13
+early_stopping_rounds 5
+едем дальше
+в итоге получили список ['feature3', 'feature2', 'feature6', 'feature1', 'feature5', 'feature13']
+начинаем след этап 0.188
 early_stopping_rounds 5
 мы сошлись
-['feature3', 'feature2', 'feature6', 'feature1', 'feature5']
-0.19
-Новая модель (0.185) лучше старой (0.255) для 2023-01
+['feature3', 'feature2', 'feature6', 'feature1', 'feature5', 'feature13']
+0.188
+Новая модель (0.185) лучше старой (0.2) для 2023-01-31T00:00:00.000000000
 --------------------------------------------------------------------
-Обрабатываем месяц 2023-02
+Обрабатываем месяц 2023-04
 Тренировочные данные с 2021-01-31 00:00:00 по 2023-01-31 00:00:00
 Всего  (25000, 29)
 OOT данные с 2023-02-28 00:00:00 по 2023-02-28 00:00:00
@@ -74,30 +153,35 @@ new var_for_add ! feature2
 early_stopping_rounds 5
 едем дальше
 в итоге получили список ['feature3', 'feature2']
-начинаем след этап 0.212
+начинаем след этап 0.213
 new var_for_add ! feature1
 early_stopping_rounds 5
 едем дальше
 в итоге получили список ['feature3', 'feature2', 'feature1']
-начинаем след этап 0.202
+начинаем след этап 0.198
 new var_for_add ! feature5
 new var_for_add ! feature6
 early_stopping_rounds 5
 едем дальше
 в итоге получили список ['feature3', 'feature2', 'feature1', 'feature6']
-начинаем след этап 0.184
+начинаем след этап 0.186
 new var_for_add ! feature5
 early_stopping_rounds 5
 едем дальше
 в итоге получили список ['feature3', 'feature2', 'feature1', 'feature6', 'feature5']
-начинаем след этап 0.179
+начинаем след этап 0.181
+new var_for_add ! feature4
+early_stopping_rounds 5
+едем дальше
+в итоге получили список ['feature3', 'feature2', 'feature1', 'feature6', 'feature5', 'feature4']
+начинаем след этап 0.178
 early_stopping_rounds 5
 мы сошлись
-['feature3', 'feature2', 'feature1', 'feature6', 'feature5']
-0.179
-Новая модель (0.188) лучше старой (0.204) для 2023-02
+['feature3', 'feature2', 'feature1', 'feature6', 'feature5', 'feature4']
+0.178
+Новая модель (0.19) лучше старой (0.207) для 2023-02-28T00:00:00.000000000
 --------------------------------------------------------------------
-Обрабатываем месяц 2023-03
+Обрабатываем месяц 2023-05
 Тренировочные данные с 2021-01-31 00:00:00 по 2023-02-28 00:00:00
 Всего  (26000, 29)
 OOT данные с 2023-03-31 00:00:00 по 2023-03-31 00:00:00
@@ -127,7 +211,7 @@ new var_for_add ! feature1
 early_stopping_rounds 5
 едем дальше
 в итоге получили список ['feature3', 'feature2', 'feature1']
-начинаем след этап 0.203
+начинаем след этап 0.201
 new var_for_add ! feature5
 new var_for_add ! feature6
 early_stopping_rounds 5
@@ -138,19 +222,19 @@ new var_for_add ! feature5
 early_stopping_rounds 5
 едем дальше
 в итоге получили список ['feature3', 'feature2', 'feature1', 'feature6', 'feature5']
-начинаем след этап 0.174
+начинаем след этап 0.175
 new var_for_add ! feature4
 early_stopping_rounds 5
 едем дальше
 в итоге получили список ['feature3', 'feature2', 'feature1', 'feature6', 'feature5', 'feature4']
-начинаем след этап 0.173
+начинаем след этап 0.172
 early_stopping_rounds 5
 мы сошлись
 ['feature3', 'feature2', 'feature1', 'feature6', 'feature5', 'feature4']
-0.173
-Новая модель (0.16) лучше старой (0.172) для 2023-03
+0.172
+Новая модель (0.166) лучше старой (0.174) для 2023-03-31T00:00:00.000000000
 --------------------------------------------------------------------
-Обрабатываем месяц 2023-04
+Обрабатываем месяц 2023-06
 Тренировочные данные с 2021-01-31 00:00:00 по 2023-03-31 00:00:00
 Всего  (27000, 29)
 OOT данные с 2023-04-30 00:00:00 по 2023-04-30 00:00:00
@@ -180,35 +264,30 @@ new var_for_add ! feature1
 early_stopping_rounds 5
 едем дальше
 в итоге получили список ['feature3', 'feature2', 'feature1']
-начинаем след этап 0.203
-new var_for_add ! feature5
+начинаем след этап 0.202
 new var_for_add ! feature6
 early_stopping_rounds 5
 едем дальше
 в итоге получили список ['feature3', 'feature2', 'feature1', 'feature6']
-начинаем след этап 0.178
+начинаем след этап 0.177
 new var_for_add ! feature5
 early_stopping_rounds 5
 едем дальше
 в итоге получили список ['feature3', 'feature2', 'feature1', 'feature6', 'feature5']
 начинаем след этап 0.169
 new var_for_add ! feature4
+new var_for_add ! feature12
 early_stopping_rounds 5
 едем дальше
-в итоге получили список ['feature3', 'feature2', 'feature1', 'feature6', 'feature5', 'feature4']
-начинаем след этап 0.168
-new var_for_add ! feature7
-early_stopping_rounds 5
-едем дальше
-в итоге получили список ['feature3', 'feature2', 'feature1', 'feature6', 'feature5', 'feature4', 'feature7']
+в итоге получили список ['feature3', 'feature2', 'feature1', 'feature6', 'feature5', 'feature12']
 начинаем след этап 0.167
 early_stopping_rounds 5
 мы сошлись
-['feature3', 'feature2', 'feature1', 'feature6', 'feature5', 'feature4', 'feature7']
+['feature3', 'feature2', 'feature1', 'feature6', 'feature5', 'feature12']
 0.167
-Старая модель (0.17) лучше новой (0.18) для 2023-04
+Новая модель (0.175) лучше старой (0.177) для 2023-04-30T00:00:00.000000000
 --------------------------------------------------------------------
-Обрабатываем месяц 2023-05
+Обрабатываем месяц 2023-07
 Тренировочные данные с 2021-01-31 00:00:00 по 2023-04-30 00:00:00
 Всего  (28000, 29)
 OOT данные с 2023-05-31 00:00:00 по 2023-05-31 00:00:00
@@ -237,30 +316,29 @@ new var_for_add ! feature2
 early_stopping_rounds 5
 едем дальше
 в итоге получили список ['feature3', 'feature1', 'feature2']
-начинаем след этап 0.208
+начинаем след этап 0.209
 new var_for_add ! feature6
 early_stopping_rounds 5
 едем дальше
 в итоге получили список ['feature3', 'feature1', 'feature2', 'feature6']
-начинаем след этап 0.178
+начинаем след этап 0.177
 new var_for_add ! feature5
 early_stopping_rounds 5
 едем дальше
 в итоге получили список ['feature3', 'feature1', 'feature2', 'feature6', 'feature5']
 начинаем след этап 0.166
-new var_for_add ! feature4
-new var_for_add ! feature21
+new var_for_add ! feature12
 early_stopping_rounds 5
 едем дальше
-в итоге получили список ['feature3', 'feature1', 'feature2', 'feature6', 'feature5', 'feature21']
-начинаем след этап 0.164
+в итоге получили список ['feature3', 'feature1', 'feature2', 'feature6', 'feature5', 'feature12']
+начинаем след этап 0.165
 early_stopping_rounds 5
 мы сошлись
-['feature3', 'feature1', 'feature2', 'feature6', 'feature5', 'feature21']
-0.164
-Новая модель (0.162) лучше старой (0.164) для 2023-05
+['feature3', 'feature1', 'feature2', 'feature6', 'feature5', 'feature12']
+0.165
+Новая модель (0.162) лучше старой (0.165) для 2023-05-31T00:00:00.000000000
 --------------------------------------------------------------------
-Обрабатываем месяц 2023-06
+Обрабатываем месяц 2023-08
 Тренировочные данные с 2021-01-31 00:00:00 по 2023-05-31 00:00:00
 Всего  (29000, 29)
 OOT данные с 2023-06-30 00:00:00 по 2023-06-30 00:00:00
@@ -284,35 +362,34 @@ new var_for_add ! feature1
 early_stopping_rounds 5
 едем дальше
 в итоге получили список ['feature3', 'feature1']
-начинаем след этап 0.227
+начинаем след этап 0.229
 new var_for_add ! feature2
 early_stopping_rounds 5
 едем дальше
 в итоге получили список ['feature3', 'feature1', 'feature2']
-начинаем след этап 0.203
+начинаем след этап 0.201
 new var_for_add ! feature6
 early_stopping_rounds 5
 едем дальше
 в итоге получили список ['feature3', 'feature1', 'feature2', 'feature6']
-начинаем след этап 0.167
+начинаем след этап 0.166
 new var_for_add ! feature5
 early_stopping_rounds 5
 едем дальше
 в итоге получили список ['feature3', 'feature1', 'feature2', 'feature6', 'feature5']
-начинаем след этап 0.154
-new var_for_add ! feature4
-new var_for_add ! feature21
+начинаем след этап 0.152
+new var_for_add ! feature17
 early_stopping_rounds 5
 едем дальше
-в итоге получили список ['feature3', 'feature1', 'feature2', 'feature6', 'feature5', 'feature21']
+в итоге получили список ['feature3', 'feature1', 'feature2', 'feature6', 'feature5', 'feature17']
 начинаем след этап 0.151
 early_stopping_rounds 5
 мы сошлись
-['feature3', 'feature1', 'feature2', 'feature6', 'feature5', 'feature21']
+['feature3', 'feature1', 'feature2', 'feature6', 'feature5', 'feature17']
 0.151
-Новая модель (0.161) лучше старой (0.166) для 2023-06
+Новая модель (0.162) лучше старой (0.168) для 2023-06-30T00:00:00.000000000
 --------------------------------------------------------------------
-Обрабатываем месяц 2023-07
+Обрабатываем месяц 2023-09
 Тренировочные данные с 2021-01-31 00:00:00 по 2023-06-30 00:00:00
 Всего  (30000, 29)
 OOT данные с 2023-07-31 00:00:00 по 2023-07-31 00:00:00
@@ -336,7 +413,7 @@ new var_for_add ! feature1
 early_stopping_rounds 5
 едем дальше
 в итоге получили список ['feature3', 'feature1']
-начинаем след этап 0.23
+начинаем след этап 0.232
 new var_for_add ! feature6
 early_stopping_rounds 5
 едем дальше
@@ -346,24 +423,19 @@ new var_for_add ! feature2
 early_stopping_rounds 5
 едем дальше
 в итоге получили список ['feature3', 'feature1', 'feature6', 'feature2']
-начинаем след этап 0.163
+начинаем след этап 0.164
 new var_for_add ! feature5
 early_stopping_rounds 5
 едем дальше
 в итоге получили список ['feature3', 'feature1', 'feature6', 'feature2', 'feature5']
-начинаем след этап 0.147
-new var_for_add ! feature10
-early_stopping_rounds 5
-едем дальше
-в итоге получили список ['feature3', 'feature1', 'feature6', 'feature2', 'feature5', 'feature10']
 начинаем след этап 0.145
 early_stopping_rounds 5
 мы сошлись
-['feature3', 'feature1', 'feature6', 'feature2', 'feature5', 'feature10']
+['feature3', 'feature1', 'feature6', 'feature2', 'feature5']
 0.145
-Новая модель (0.159) лучше старой (0.162) для 2023-07
+Новая модель (0.158) лучше старой (0.165) для 2023-07-31T00:00:00.000000000
 --------------------------------------------------------------------
-Обрабатываем месяц 2023-08
+Обрабатываем месяц 2023-10
 Тренировочные данные с 2021-01-31 00:00:00 по 2023-07-31 00:00:00
 Всего  (31000, 29)
 OOT данные с 2023-08-31 00:00:00 по 2023-08-31 00:00:00
@@ -387,35 +459,29 @@ new var_for_add ! feature1
 early_stopping_rounds 5
 едем дальше
 в итоге получили список ['feature3', 'feature1']
-начинаем след этап 0.23
+начинаем след этап 0.231
 new var_for_add ! feature6
 early_stopping_rounds 5
 едем дальше
 в итоге получили список ['feature3', 'feature1', 'feature6']
-начинаем след этап 0.191
-new var_for_add ! feature5
+начинаем след этап 0.19
 new var_for_add ! feature2
 early_stopping_rounds 5
 едем дальше
 в итоге получили список ['feature3', 'feature1', 'feature6', 'feature2']
-начинаем след этап 0.155
+начинаем след этап 0.157
 new var_for_add ! feature5
 early_stopping_rounds 5
 едем дальше
 в итоге получили список ['feature3', 'feature1', 'feature6', 'feature2', 'feature5']
-начинаем след этап 0.138
-new var_for_add ! feature16
-early_stopping_rounds 5
-едем дальше
-в итоге получили список ['feature3', 'feature1', 'feature6', 'feature2', 'feature5', 'feature16']
-начинаем след этап 0.137
+начинаем след этап 0.135
 early_stopping_rounds 5
 мы сошлись
-['feature3', 'feature1', 'feature6', 'feature2', 'feature5', 'feature16']
-0.137
-Новая модель (0.144) лучше старой (0.151) для 2023-08
+['feature3', 'feature1', 'feature6', 'feature2', 'feature5']
+0.135
+Новая модель (0.147) лучше старой (0.151) для 2023-08-31T00:00:00.000000000
 --------------------------------------------------------------------
-Обрабатываем месяц 2023-09
+Обрабатываем месяц 2023-11
 Тренировочные данные с 2021-01-31 00:00:00 по 2023-08-31 00:00:00
 Всего  (32000, 29)
 OOT данные с 2023-09-30 00:00:00 по 2023-09-30 00:00:00
@@ -434,7 +500,7 @@ new var_for_add ! feature3
 early_stopping_rounds 5
 едем дальше
 в итоге получили список ['feature3']
-начинаем след этап 0.264
+начинаем след этап 0.265
 new var_for_add ! feature1
 new var_for_add ! feature6
 early_stopping_rounds 5
@@ -445,25 +511,24 @@ new var_for_add ! feature1
 early_stopping_rounds 5
 едем дальше
 в итоге получили список ['feature3', 'feature6', 'feature1']
-начинаем след этап 0.189
-new var_for_add ! feature5
+начинаем след этап 0.187
 new var_for_add ! feature2
 early_stopping_rounds 5
 едем дальше
 в итоге получили список ['feature3', 'feature6', 'feature1', 'feature2']
-начинаем след этап 0.148
+начинаем след этап 0.151
 new var_for_add ! feature5
 early_stopping_rounds 5
 едем дальше
 в итоге получили список ['feature3', 'feature6', 'feature1', 'feature2', 'feature5']
-начинаем след этап 0.128
+начинаем след этап 0.127
 early_stopping_rounds 5
 мы сошлись
 ['feature3', 'feature6', 'feature1', 'feature2', 'feature5']
-0.128
-Старая модель (0.141) лучше новой (0.143) для 2023-09
+0.127
+Новая модель (0.142) лучше старой (0.145) для 2023-09-30T00:00:00.000000000
 --------------------------------------------------------------------
-Обрабатываем месяц 2023-10
+Обрабатываем месяц 2023-12
 Тренировочные данные с 2021-01-31 00:00:00 по 2023-09-30 00:00:00
 Всего  (33000, 29)
 OOT данные с 2023-10-31 00:00:00 по 2023-10-31 00:00:00
@@ -488,127 +553,34 @@ new var_for_add ! feature6
 early_stopping_rounds 5
 едем дальше
 в итоге получили список ['feature3', 'feature6']
-начинаем след этап 0.223
+начинаем след этап 0.224
 new var_for_add ! feature1
 early_stopping_rounds 5
 едем дальше
 в итоге получили список ['feature3', 'feature6', 'feature1']
-начинаем след этап 0.18
+начинаем след этап 0.178
 new var_for_add ! feature2
 early_stopping_rounds 5
 едем дальше
 в итоге получили список ['feature3', 'feature6', 'feature1', 'feature2']
-начинаем след этап 0.135
+начинаем след этап 0.137
 new var_for_add ! feature5
 early_stopping_rounds 5
 едем дальше
 в итоге получили список ['feature3', 'feature6', 'feature1', 'feature2', 'feature5']
 начинаем след этап 0.115
+new var_for_add ! feature14
+early_stopping_rounds 5
+едем дальше
+в итоге получили список ['feature3', 'feature6', 'feature1', 'feature2', 'feature5', 'feature14']
+начинаем след этап 0.114
+new var_for_add ! feature9
+early_stopping_rounds 5
+едем дальше
+в итоге получили список ['feature3', 'feature6', 'feature1', 'feature2', 'feature5', 'feature14', 'feature9']
+начинаем след этап 0.113
 early_stopping_rounds 5
 мы сошлись
-['feature3', 'feature6', 'feature1', 'feature2', 'feature5']
-0.115
-Новая модель (0.148) лучше старой (0.15) для 2023-10
---------------------------------------------------------------------
-Обрабатываем месяц 2023-11
-Тренировочные данные с 2021-01-31 00:00:00 по 2023-10-31 00:00:00
-Всего  (34000, 29)
-OOT данные с 2023-11-30 00:00:00 по 2023-11-30 00:00:00
-Всего  (1000, 29)
-1
-треин мин 2022-02-28 00:00:00 треин макс 2023-07-31 00:00:00 shape (18000, 30)
-тест мин 2023-08-31 00:00:00 тест макс 2023-08-31 00:00:00 shape (1000, 30)
-2
-треин мин 2022-03-31 00:00:00 треин макс 2023-08-31 00:00:00 shape (18000, 30)
-тест мин 2023-09-30 00:00:00 тест макс 2023-09-30 00:00:00 shape (1000, 30)
-3
-треин мин 2022-04-30 00:00:00 треин макс 2023-09-30 00:00:00 shape (18000, 30)
-тест мин 2023-10-31 00:00:00 тест макс 2023-10-31 00:00:00 shape (1000, 30)
-начинаем след этап 100
-new var_for_add ! feature3
-early_stopping_rounds 5
-едем дальше
-в итоге получили список ['feature3']
-начинаем след этап 0.26
-new var_for_add ! feature1
-new var_for_add ! feature6
-early_stopping_rounds 5
-едем дальше
-в итоге получили список ['feature3', 'feature6']
-начинаем след этап 0.217
-new var_for_add ! feature1
-early_stopping_rounds 5
-едем дальше
-в итоге получили список ['feature3', 'feature6', 'feature1']
-начинаем след этап 0.173
-new var_for_add ! feature2
-early_stopping_rounds 5
-едем дальше
-в итоге получили список ['feature3', 'feature6', 'feature1', 'feature2']
-начинаем след этап 0.127
-new var_for_add ! feature5
-early_stopping_rounds 5
-едем дальше
-в итоге получили список ['feature3', 'feature6', 'feature1', 'feature2', 'feature5']
-начинаем след этап 0.1
-new var_for_add ! feature12
-early_stopping_rounds 5
-едем дальше
-в итоге получили список ['feature3', 'feature6', 'feature1', 'feature2', 'feature5', 'feature12']
-начинаем след этап 0.1
-early_stopping_rounds 5
-мы сошлись
-['feature3', 'feature6', 'feature1', 'feature2', 'feature5', 'feature12']
-0.1
-Новая модель (0.148) лучше старой (0.152) для 2023-11
---------------------------------------------------------------------
-Обрабатываем месяц 2023-12
-Тренировочные данные с 2021-01-31 00:00:00 по 2023-11-30 00:00:00
-Всего  (35000, 29)
-OOT данные с 2023-12-31 00:00:00 по 2023-12-31 00:00:00
-Всего  (1000, 29)
-1
-треин мин 2022-03-31 00:00:00 треин макс 2023-08-31 00:00:00 shape (18000, 30)
-тест мин 2023-09-30 00:00:00 тест макс 2023-09-30 00:00:00 shape (1000, 30)
-2
-треин мин 2022-04-30 00:00:00 треин макс 2023-09-30 00:00:00 shape (18000, 30)
-тест мин 2023-10-31 00:00:00 тест макс 2023-10-31 00:00:00 shape (1000, 30)
-3
-треин мин 2022-05-31 00:00:00 треин макс 2023-10-31 00:00:00 shape (18000, 30)
-тест мин 2023-11-30 00:00:00 тест макс 2023-11-30 00:00:00 shape (1000, 30)
-начинаем след этап 100
-new var_for_add ! feature3
-early_stopping_rounds 5
-едем дальше
-в итоге получили список ['feature3']
-начинаем след этап 0.265
-new var_for_add ! feature6
-early_stopping_rounds 5
-едем дальше
-в итоге получили список ['feature3', 'feature6']
-начинаем след этап 0.217
-new var_for_add ! feature1
-early_stopping_rounds 5
-едем дальше
-в итоге получили список ['feature3', 'feature6', 'feature1']
-начинаем след этап 0.168
-new var_for_add ! feature2
-early_stopping_rounds 5
-едем дальше
-в итоге получили список ['feature3', 'feature6', 'feature1', 'feature2']
-начинаем след этап 0.12
-new var_for_add ! feature5
-early_stopping_rounds 5
-едем дальше
-в итоге получили список ['feature3', 'feature6', 'feature1', 'feature2', 'feature5']
-начинаем след этап 0.087
-new var_for_add ! feature12
-early_stopping_rounds 5
-едем дальше
-в итоге получили список ['feature3', 'feature6', 'feature1', 'feature2', 'feature5', 'feature12']
-начинаем след этап 0.086
-early_stopping_rounds 5
-мы сошлись
-['feature3', 'feature6', 'feature1', 'feature2', 'feature5', 'feature12']
-0.086
-Новая модель (0.132) лучше старой (0.137) для 2023-12
+['feature3', 'feature6', 'feature1', 'feature2', 'feature5', 'feature14', 'feature9']
+0.113
+Новая модель (0.149) лучше старой (0.151) для 2023-10-31T00:00:00.000000000
