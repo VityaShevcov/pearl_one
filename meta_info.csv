@@ -1,13 +1,13 @@
 month,features,mape_new,mape_old
-2023-01,"['feature3', 'feature2', 'feature6']",0.212,0.28
-2023-02,"['feature3', 'feature2', 'feature6']",0.192,0.194
-2023-03,"['feature3', 'feature2', 'feature6', 'feature1', 'feature5']",0.184,0.198
-2023-04,"['feature3', 'feature2', 'feature1', 'feature6', 'feature5']",0.192,0.201
-2023-05,"['feature3', 'feature2', 'feature1', 'feature6', 'feature5', 'feature15']",0.165,0.175
-2023-06,"['feature3', 'feature2', 'feature1', 'feature6', 'feature5']",0.174,0.178
-2023-07,"['feature3', 'feature1', 'feature2', 'feature6', 'feature5']",0.16,0.166
-2023-08,"['feature3', 'feature1', 'feature2', 'feature6', 'feature5']",0.16,0.164
+2023-01,"['feature3', 'feature2', 'feature6']",0.209,0.28
+2023-02,"['feature3', 'feature2', 'feature6']",0.192,0.193
+2023-03,"['feature3', 'feature2', 'feature6', 'feature1']",0.188,0.198
+2023-04,"['feature3', 'feature2', 'feature1', 'feature6', 'feature5', 'feature21']",0.194,0.206
+2023-05,"['feature3', 'feature1', 'feature2', 'feature6', 'feature5', 'feature19']",0.169,0.175
+2023-06,"['feature3', 'feature1', 'feature2', 'feature6', 'feature5', 'feature19']",0.179,0.182
+2023-07,"['feature3', 'feature1', 'feature2', 'feature6', 'feature5', 'feature4']",0.163,0.169
+2023-08,"['feature3', 'feature1', 'feature2', 'feature6', 'feature5']",0.16,0.165
 2023-09,"['feature3', 'feature1', 'feature6', 'feature2', 'feature5']",0.155,0.164
-2023-10,"['feature3', 'feature1', 'feature6', 'feature2', 'feature5', 'feature12']",0.148,0.148
-2023-11,"['feature3', 'feature1', 'feature6', 'feature2', 'feature5', 'feature10']",0.142,0.147
-2023-12,"['feature3', 'feature1', 'feature6', 'feature2', 'feature5']",0.146,0.151
+2023-10,"['feature3', 'feature1', 'feature6', 'feature2', 'feature5', 'feature21']",0.148,0.148
+2023-11,"['feature3', 'feature1', 'feature6', 'feature2', 'feature5', 'feature20', 'feature21']",0.143,0.147
+2023-12,"['feature3', 'feature1', 'feature6', 'feature2', 'feature5', 'feature11']",0.148,0.152
